@@ -1,0 +1,186 @@
+.page-footer {
+    height: 100vh;
+}
+
+.footer__top {
+    @include flexy (center, center, column);
+    height: 50%;
+    background-color: $black;
+    background-image: url("../images/footer_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.say-hi__title {
+    @include font(bold, 30px);
+    color: $whiteGrey;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.say-hi__form {
+    @include flexy(flex-start, stretch, column);
+    width: 900px;
+
+    &__input {
+        width: 435px;
+        margin-right: 25px;
+        background-color: transparent;
+        color: $whiteGrey;
+        font-style: italic;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border: 1px solid rgba($color: $whiteGrey , $alpha: 0.5);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &::placeholder {
+            color: $whiteGrey;
+            font-style: italic;
+        }
+    }
+
+    &__textarea {
+        width: 900px;
+        height: 200px;
+        margin-top: 30px;
+        resize: none;
+        background-color: transparent;
+        color: $whiteGrey;
+        font-style: italic;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border: 1px solid rgba($color: $whiteGrey , $alpha: 0.5);
+
+        &::placeholder {
+            color: $whiteGrey;
+            font-style: italic;
+        }
+    }
+
+    &__button {
+        width: 200px;
+        height: 50px;
+        margin-top: 30px;
+        align-self: center;
+        background-color: $attention;
+        border: none;
+        text-align: center;
+        color: $whiteGrey;
+        cursor: pointer;
+    }
+}
+
+.footer__middle {
+    height: 45%;
+    padding-top: 40px;
+    background-color: #0b0a0a;
+
+    &__wrapper {
+        @include container;
+        @include flexy(space-between)
+    }
+}
+
+.footer__column {
+    width: 30%;
+}
+
+.about-us__text {
+    text-align: left;
+}
+
+.about-us__title,
+.links__title,
+.find-us__title,
+.subscribe__title {
+    @include font(bold, 18px);
+    color: $white;
+}
+
+.about-us__text,
+.quick-link {
+    @include font(400, 14px);
+    color: $grey;
+}
+
+.links__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.links__title {
+    padding-left: 67px;
+}
+
+.subcolumn {
+    @include flexy(space-evenly);
+}
+
+.socials__column {
+    @include flexy(flex-start, stretch, column);
+
+    .find-us__title {
+        margin-bottom: 10px;
+    }
+
+    .links__wrapper {
+        margin-bottom: 10px;
+    }
+
+    .socials__link {
+        margin-right: 5px;
+    }
+
+    .subscribe__title {
+        margin-bottom: 10px;
+    }
+
+    .subscribe__form {
+        @include flexy(flex-start, stretch, column);
+
+        &__input {
+            width: 250px;
+            margin-bottom: 15px;
+            background-color: transparent;
+            color: $grey;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 20px;
+            padding-left: 20px;
+            border: 1px solid rgba($color: #838484, $alpha: 0.5);
+
+            &::placeholder {
+                color: $grey;
+            }
+        }
+
+        &__button {
+            width: 110px;
+            height: 40px;
+            background-color: $attention;
+            color: $white;
+            text-align: center;
+            border: none;
+        }
+    }
+}
+
+.footer__copyright {
+    @include flexy(center, center, row);
+    height: 5%;
+    background-color: $black;
+
+    .copyright {
+        text-align: center;
+        color: $grey;
+    }
+}

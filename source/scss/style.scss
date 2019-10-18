@@ -1,0 +1,44 @@
+$grey: #8f8e91;
+$textBlack: #454546;
+$attention: #1dde85;
+$whiteGrey: #fffcf4;
+$white: #ffffff;
+$black: #000000;
+
+@mixin flexy($content: flex-start, $items: stretch, $dir: row) {
+    display: flex;
+    justify-content: $content;
+    align-items: $items;
+    flex-direction: $dir;
+}
+
+@mixin container($width: 1170px) {
+    width: $width;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin font($weight: 400, $size: 14px, $height: 30px) {
+    font-family: "Roboto";
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@import "_header.scss" ;
+@import "_footer.scss" ;
+@import "_main.scss" ;
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+p, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}

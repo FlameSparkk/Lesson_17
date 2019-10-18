@@ -1,0 +1,296 @@
+.main {
+    background-color: $whiteGrey;
+}
+
+.services {
+    @include container;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__title__wrapper {
+        @include flexy(center, center, column);
+    }
+
+    &__title {
+        @include font(bold, 30px);
+        margin-bottom: 60px;
+        color: $textBlack;
+
+        .foinni {
+            color: $attention;
+        }
+    }
+
+    &__description {
+        @include container(900px);
+        @include font(400, 18px);
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+    &__wrapper {
+        @include flexy(space-between);
+        flex-wrap: wrap;
+    }
+}
+
+.service {
+    @include flexy(center, center, column);
+    width: 360px; 
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border: 1px solid rgba($color: $grey, $alpha: 0.5);
+
+    &__image {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        @include font(bold, 24px);
+        margin-bottom: 40px;
+    }
+
+    &__description {
+        color: $grey;
+    }
+
+    &:hover {
+        border: 1px solid $attention;
+
+        .service__title {
+            color: $attention;
+        }
+
+        .service__description {
+            color: $textBlack;
+        }
+    }
+}
+
+.meet-us {
+    @include container;
+    margin-bottom: 125px;
+
+    &__title {
+        @include font(bold, 30px);
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__big__wrapper {
+        @include flexy(space-between);
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    .active__wrapper {
+        background-color: $attention;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        .photo {
+            opacity: 0.1;
+
+            &__description {
+                width: 100%;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                background-color: transparent;
+                position: absolute;
+                bottom: 40%;
+                text-align: center;
+                color: $whiteGrey;
+            }
+        }
+
+        .active__info {
+            @include flexy(center,center);
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-top: 1px solid rgba($color: $white, $alpha: 0.9);
+            border-bottom: 1px solid rgba($color: $white, $alpha: 0.9);
+            position: absolute;
+            bottom: 13%;
+            left: 0;
+
+            .active__socials {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.photo__wrapper {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .photo__description {
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgba($color: $textBlack, $alpha: 0.9);
+        position: absolute;
+        bottom: 3%;
+        text-align: center;
+        color: $whiteGrey;
+
+        .photo__name {
+            @include font(bold, 18px);
+        }
+    
+        .name__explain {
+            @include font(400, 14px);
+        }
+    }
+}
+
+.works {
+    @include container;
+    margin-bottom: 110px;
+
+    &__title {
+        @include font(bold, 30px);
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .menu {
+        @include flexy(center, center, row);
+        margin-bottom: 50px;
+
+        &__list {
+            @include flexy(space-between);
+            width: 570px;
+            padding-left: 0;
+            margin: 0;
+            list-style: none;
+
+            &-item {
+                @include font(400, 18px);
+                padding-bottom: 5px;
+                color: $textBlack;
+
+                &:hover {
+                    border-bottom: 1px solid $attention;
+                    margin-bottom: -5px;
+
+                    .menu__link {
+                        color: $attention;
+                    }
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        @include flexy;
+        flex-wrap: wrap;
+
+        .example {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__button {
+        width: 200px;
+        height: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: $attention;
+        border: none;
+        text-align: center;
+        color: $whiteGrey;
+        cursor: pointer;
+    }
+}
+
+.pricing {
+    @include container;
+    padding-bottom: 125px;
+
+    &__title {
+        @include font(bold, 30px);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+.plans__wrapper {
+    @include flexy(space-between);
+
+    .plan__wrapper {
+        @include flexy(center, center, column);
+        text-align: center;
+        width: 270px;
+
+        .hover__wrapper {
+            width: 100%;
+        }
+
+        .plan__title {
+            @include font(400, 14px);
+            color: $grey;
+            margin-bottom: 30px;
+        }
+
+        .price__wrapper {
+            width: 100%;
+            border: 1px solid rgba($color: $textBlack, $alpha: 0.5);
+            text-align: center;
+
+            .price {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+
+        .plan__list {
+            @include font(400, 14px);
+            color: $grey;
+            padding: 0;
+            margin-bottom: 30px;
+            list-style: none;
+
+            &-item {
+                margin-bottom: 10px;
+            }
+        }
+
+        .plan__button {
+            width: 100px;
+            height: 40px;
+            margin-bottom: 20px;
+            border: 1px solid rgba($color: $textBlack, $alpha: 0.5);
+            background-color: transparent;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        &:hover {
+            .hover__wrapper {
+                outline: 1px solid $attention;
+            }
+
+            .plan__title {
+                color: $attention;
+            }
+
+            .price__wrapper {
+                background-color: $attention;
+                border-color: $attention;
+            }
+
+            .plan__button {
+                background-color: $attention;
+                border-color: $attention;
+                color: $whiteGrey;
+            }
+        }
+    }
+}
